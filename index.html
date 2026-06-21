@@ -4,295 +4,433 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abyssinia Dentist Clinic - Addis Ababa</title>
+    <!-- Inter Font for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* CSS Variables for Brand Colors */
         :root {
-            --primary-color: #0d4a7a; /* A professional teal-blue */
-            --secondary-color: #f0f7ff; /* A very light blue background */
-            --text-color: #333333;
-            --accent-color: #ff9900; /* Warm accent for calls-to-action */
+            --bg-light: #f4f8fb;
+            --text-dark: #000000;
+            --text-muted: #555555;
+            --card-radius: 24px;
+            --accent-blue: #0d4a7a;
         }
 
-        /* Reset and Global Styles */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            font-family: 'Inter', sans-serif;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--secondary-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        /* Mobile-First Header and Navigation */
-        header {
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 15px 20px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .logo {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .nav-menu {
-            display: none; /* Hide on mobile by default */
-            list-style: none;
-            margin-top: 15px;
-        }
-
-        .nav-menu li {
-            margin-bottom: 10px;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            font-size: 1.1em;
-        }
-
-        .book-call-btn {
-            display: block;
-            width: 100%;
-            background-color: var(--accent-color);
-            color: #ffffff;
-            text-align: center;
+            background-color: #ffffff;
+            color: var(--text-dark);
             padding: 12px;
-            border-radius: 25px;
-            text-decoration: none;
-            margin-top: 15px;
-            font-weight: bold;
         }
 
-        /* Hamburger Menu Icon */
-        .menu-toggle {
-            display: block;
-            float: right;
-            font-size: 1.5em;
-            cursor: pointer;
-        }
-
-        /* Container Class for Spacing */
-        .container {
-            width: 90%;
+        /* Wrapper to simulate the clean layout borders */
+        .page-wrapper {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 80px 0 30px 0; /* Clear fixed header */
         }
 
-        /* Section Specific Styles */
-        section {
+        /* --- HERO SECTION --- */
+        .hero-container {
+            position: relative;
+            background-color: #799bb3; /* Matches the soft background tone */
+            border-radius: var(--card-radius);
+            padding: 30px 20px 40px 20px;
+            overflow: hidden;
+            color: #ffffff;
+        }
+
+        /* Top Nav inside Hero */
+        .hero-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 40px;
         }
 
-        .section-title {
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            text-align: center;
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #1a73e8 0%, #0d4a7a 100%);
-            color: white;
-            padding: 100px 20px 60px 20px;
-            text-align: center;
-            border-radius: 10px;
+        .book-btn {
+            background: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Hero Main Content */
+        .hero-content h1 {
+            font-size: 2.2rem;
+            line-height: 1.1;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            max-width: 90%;
+        }
+
+        .hero-subtitle {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            opacity: 0.9;
             margin-bottom: 30px;
         }
 
-        .hero h1 {
-            font-size: 2em;
+        /* Hero Image Placement (Mainly targeting Ethiopian Patient) */
+        .hero-image-wrapper {
+            width: 100%;
+            height: 250px;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* Floating Badge tags inside Hero */
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(5px);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #ffffff;
+        }
+        .tag.active {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        /* Floating Dr. Card profile snippet */
+        .dr-badge {
+            background: #ffffff;
+            color: #000000;
+            border-radius: 16px;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        .dr-thumb {
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .dr-info h4 {
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .dr-info p {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* --- SERVICES SECTION --- */
+        .services-section {
+            padding: 40px 10px;
+        }
+
+        .section-tag {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
             margin-bottom: 15px;
         }
 
-        .hero p {
-            font-size: 1.1em;
-            opacity: 0.9;
+        .section-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 30px;
         }
 
-        /* Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: 1fr; /* Single column for mobile */
-            gap: 20px;
+        /* Horizontal scrolling service cards for Mobile */
+        .services-slider {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 15px;
+        }
+
+        .services-slider::-webkit-scrollbar {
+            display: none; /* Keep layout clean */
         }
 
         .service-card {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            text-align: center;
+            scroll-snap-align: start;
+            min-width: 260px;
+            position: relative;
+            height: 220px;
+            border-radius: 20px;
+            overflow: hidden;
         }
 
-        .service-icon {
-            font-size: 2.5em;
-            color: var(--primary-color);
-            margin-bottom: 10px;
+        .service-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        /* About Us Section */
-        .about {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
+        .service-card-title {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
         }
 
-        /* Contact Details Section */
-        .contact-details {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
+        /* --- EXCELLENCE / ABOUT SECTION --- */
+        .about-section {
+            padding: 20px 10px;
+        }
+
+        .about-image-card {
+            border-radius: var(--card-radius);
+            overflow: hidden;
+            height: 280px;
+            margin-bottom: 25px;
+        }
+
+        .about-image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Statistics Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
             margin-top: 30px;
+            border-top: 1px solid #eeeeee;
+            padding-top: 20px;
         }
 
-        .contact-item {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
+        .stat-item h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
         }
 
-        .contact-item strong {
-            margin-right: 10px;
-            color: var(--primary-color);
+        .stat-item p {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-top: 20px;
         }
 
-        /* Simple Footer */
+        /* --- FOOTER / CONTACT INFO --- */
         footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: auto;
+            background-color: var(--bg-light);
+            border-radius: var(--card-radius);
+            padding: 30px 20px;
+            margin-top: 20px;
         }
 
-        /* Desktop and Large Screen Styles (Tablet and Up) */
-        @media screen and (min-width: 768px) {
-            .nav-menu {
-                display: flex;
-                float: right;
-                margin-top: 0;
+        .footer-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .contact-link {
+            display: block;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        /* --- RESPONSIVE DESKTOP ADJUSTMENTS --- */
+        @media (min-width: 768px) {
+            body { padding: 30px; }
+            
+            .hero-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 60px;
+                align-items: center;
+                gap: 40px;
             }
 
-            .nav-menu li {
-                margin: 0 0 0 20px;
+            .hero-image-wrapper {
+                height: 400px;
+                margin-bottom: 0;
             }
 
-            .book-call-btn {
-                display: inline-block;
-                width: auto;
-                float: right;
-                margin-top: -10px;
-                margin-left: 20px;
+            .services-slider {
+                overflow-x: visible;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
             }
 
-            .menu-toggle {
-                display: none;
+            .about-section {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 50px;
+                align-items: center;
+                padding: 60px 10px;
             }
-
-            .services-grid {
-                grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
-            }
-
-            .hero h1 {
-                font-size: 2.5em;
-            }
+            
+            .about-image-card { margin-bottom: 0; height: 400px; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <a href="#" class="logo">Abyssinia Dentist</a>
-        <div class="menu-toggle">≡</div>
-        <a href="tel:0912643473" class="book-call-btn">BOOK A CALL</a>
-        <ul class="nav-menu">
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </header>
+    <div class="page-wrapper">
 
-    <div class="container">
-        <!-- Hero Section with Your Design Inspiration -->
-        <section class="hero">
-            <h1>MODERN DENTISTRY WITH GENTLE CARE.</h1>
-            <p>Expert dental care for healthy, confident smiles in Addis Ababa.</p>
-        </section>
+        <!-- --- HERO SECTION --- -->
+        <section class="hero-container">
+            <div>
+                <nav class="hero-nav">
+                    <div class="logo">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.5 0 4.5 5.5 4.5 7.5s-1.5 3.5-4.5 3.5-4.5-1.5-4.5-3.5S9.5 2 12 2zm0 11c3.5 0 7 2 7 5v2H5v-2c0-3 3.5-5 7-5z"/></svg>
+                        Abyssinia
+                    </div>
+                    <a href="tel:0912643473" class="book-btn">Book a call &rarr;</a>
+                </nav>
 
-        <!-- Signature Dental Services Section -->
-        <section id="services">
-            <h2 class="section-title">DISCOVER OUR SIGNATURE SERVICES</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🦷</div>
-                    <h3>Dental Checkups</h3>
-                    <p>Routine examinations and professional cleaning to keep your smile bright.</p>
+                <div class="hero-content">
+                    <h1>MODERN DENTISTRY WITH GENTLE CARE.</h1>
+                    <p class="hero-subtitle">Expert dental care for healthy, confident smiles at every age—delivered with comfort, precision, and trust right here in Gerji, Addis Ababa.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h3>Teeth Cleaning</h3>
-                    <p>Gentle procedures to remove plaque and polish your teeth for a sparkling feel.</p>
+
+                <div class="tag-container">
+                    <span class="tag active">Dental Checkups</span>
+                    <span class="tag">Teeth Cleaning</span>
+                    <span class="tag">Tooth Filling</span>
+                    <span class="tag">Gum Treatment</span>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">💎</div>
-                    <h3>Dental Veneers</h3>
-                    <p>Get the perfect aesthetic for your smile with our custom-made veneers.</p>
+            </div>
+
+            <div>
+                <!-- Primary Image Placement: Swap source with an Ethiopian Patient profile -->
+                <div class="hero-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="Smiling African Patient at Abyssinia Dental Clinic">
+                </div>
+
+                <!-- Doctor Badge Snippet -->
+                <div class="dr-badge">
+                    <img class="dr-thumb" src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=150&q=80" alt="Ethiopian Dentist Profile">
+                    <div class="dr-info">
+                        <h4>Our Specialist Team</h4>
+                        <p>Pediatric & General Dentistry (4.9 Rating)</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- About and Compassionate Care Section -->
-        <section id="about" class="about">
-            <h2 class="section-title">EXCELLENCE IN DENTISTRY WITH COMPASSIONATE CARE</h2>
-            <p>At Abyssinia Dentist Clinic, we provide modern dental care delivered with comfort and precision. Located in Gerji, Addis Ababa, we have a calm, welcoming environment designed to make every visit stress-free.</p>
-        </section>
+        <!-- --- SERVICES SECTION --- -->
+        <section class="services-section">
+            <span class="section-tag">Our Features /</span>
+            <h2 class="section-title">DISCOVER OUR SIGNATURE<br>DENTAL SERVICES</h2>
+            <p class="section-desc">Experience modern dental care delivered with comfort, precision, and attention to detail. Our clinic provides a calm, welcoming environment designed to make every visit stress-free.</p>
 
-        <!-- Contact Section with Your Specific Details -->
-        <section id="contact">
-            <div class="contact-details">
-                <h3 class="section-title">OUR CONTACT INFO</h3>
-                <div class="contact-item">
-                    <strong>📍 Location:</strong> Gerji, Addis Ababa
+            <div class="services-slider">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=300&q=80" alt="Teeth Cleaning">
+                    <div class="service-card-title">Teeth Cleaning</div>
                 </div>
-                <div class="contact-item">
-                    <strong>📞 Phone:</strong> <a href="tel:0912643473">0912643473</a>
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=300&q=80" alt="Dental Checkups">
+                    <div class="service-card-title">Dental Checkups</div>
                 </div>
-                <div class="contact-item">
-                    <strong>✉️ Email:</strong> <a href="mailto:habtamukidus96@gmail.com">habtamukidus96@gmail.com</a>
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1461532257756-765d7bac28b4?auto=format&fit=crop&w=300&q=80" alt="Dental Veneers">
+                    <div class="service-card-title">Dental Veneers</div>
                 </div>
             </div>
         </section>
+
+        <!-- --- ABOUT / EXCELLENCE SECTION --- -->
+        <section class="about-section">
+            <div class="about-image-card">
+                <!-- About Main image: Place an Ethiopian or African doctor treating a patient here -->
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" alt="Modern dentistry treatments at Abyssinia Clinic">
+            </div>
+
+            <div>
+                <span class="section-tag">About Dental /</span>
+                <h2 class="section-title">EXCELLENCE IN DENTISTRY WITH COMPASSIONATE CARE</h2>
+                <p class="section-desc">Discover delighted patient care structures designed around modern diagnostic comfort. We are committed to prioritizing structural oral health using high-tier contemporary tools.</p>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>98%</h3>
+                        <p>Satisfaction Rate</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50K</h3>
+                        <p>Smiles Transformed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>4.9</h3>
+                        <p>Customers Rating</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- CONTACT FOOTER --- -->
+        <footer>
+            <h3 class="footer-title">Abyssinia Dental Clinic</h3>
+            <p class="contact-link">📍 Gerji, Addis Ababa, Ethiopia</p>
+            <a href="tel:0912643473" class="contact-link">📞 Phone: 0912643473</a>
+            <a href="mailto:habtamukidus96@gmail.com" class="contact-link">✉️ Email: habtamukidus96@gmail.com</a>
+        </footer>
 
     </div>
-
-    <footer>
-        <p>&copy; 2024 Abyssinia Dentist Clinic. All rights reserved.</p>
-    </footer>
-
-    <!-- Simple Script to Toggle Mobile Menu -->
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            var menu = document.querySelector('.nav-menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
-        });
-    </script>
 
 </body>
 </html>
