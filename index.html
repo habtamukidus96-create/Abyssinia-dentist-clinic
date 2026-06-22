@@ -209,80 +209,119 @@
                  alt="User Profile Image">
         </div>
 
-        <div class="p-4 space-y-5">
-            <div class="app-welcome-card rounded-2xl p-5 text-gray-900 shadow-2xl relative overflow-hidden">
-                <div class="flex items-center gap-2 mb-3">
-                    <span class="text-lg">🦷</span>
-                    <span class="text-xs font-bold uppercase tracking-widest text-gray-600">Abyssinia Patient App</span>
+        <div class="p-4">
+            
+            <div id="screen-home" class="space-y-5 block">
+                <div class="app-welcome-card rounded-2xl p-5 text-gray-900 shadow-2xl relative overflow-hidden">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-lg">🦷</span>
+                        <span class="text-xs font-bold uppercase tracking-widest text-gray-600">Abyssinia Patient App</span>
+                    </div>
+                    <h2 class="text-xl font-bold tracking-tight text-gray-900 mb-1">Welcome back, Client</h2>
+                    <p class="text-xs text-gray-600 mb-4 font-light">Your next scheduled gentle care treatment:</p>
+                    
+                    <div id="appointment-box" class="bg-black/5 rounded-xl p-3 mb-4 border border-black/5">
+                        <span class="text-xs font-bold block text-gray-800">Routine Checkup & Polish</span>
+                        <span class="text-[11px] text-gray-600 font-medium block mt-0.5">📅 Tomorrow at 10:00 AM</span>
+                    </div>
+                    
+                    <button id="btn-confirm" class="w-full bg-[#0d4a7a] text-white text-xs font-semibold py-3 rounded-xl shadow-md active:scale-[0.99] transition-transform">
+                        Confirm Attendance
+                    </button>
                 </div>
-                <h2 class="text-xl font-bold tracking-tight text-gray-900 mb-1">Welcome back, Client</h2>
-                <p class="text-xs text-gray-600 mb-4 font-light">Your next scheduled gentle care treatment:</p>
-                
-                <div class="bg-black/5 rounded-xl p-3 mb-4 border border-black/5">
-                    <span class="text-xs font-bold block text-gray-800">Routine Checkup & Polish</span>
-                    <span class="text-[11px] text-gray-600 font-medium block mt-0.5">📅 Tomorrow at 10:00 AM</span>
-                </div>
-                
-                <button class="w-full bg-[#0d4a7a] text-white text-xs font-semibold py-3 rounded-xl shadow-md active:scale-[0.99] transition-transform">
-                    Confirm Attendance
-                </button>
-            </div>
 
-            <div>
-                <h3 class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3 px-1">Your Registered Plan</h3>
-                <div class="space-y-2">
-                    <div class="app-glass p-3 rounded-xl flex justify-between items-center">
-                        <span class="text-xs font-medium text-gray-200">Dental Checkup Plan</span>
-                        <span class="text-[10px] bg-green-500/20 text-green-400 px-2 py-0.5 rounded-full font-medium">Active</span>
-                    </div>
-                    <div class="app-glass p-3 rounded-xl flex justify-between items-center">
-                        <span class="text-xs font-medium text-gray-200">Deep Teeth Cleaning</span>
-                        <span class="text-[10px] text-gray-400">Included</span>
-                    </div>
-                    <div class="app-glass p-3 rounded-xl flex justify-between items-center">
-                        <span class="text-xs font-medium text-gray-200">Cosmetic Veneers Quote</span>
-                        <span class="text-[10px] text-amber-400 font-medium">Pending Review</span>
+                <div>
+                    <h3 class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3 px-1">Your Registered Plan</h3>
+                    <div class="space-y-2">
+                        <div class="app-glass p-3 rounded-xl flex justify-between items-center">
+                            <span class="text-xs font-medium text-gray-200">Dental Checkup Plan</span>
+                            <span class="text-[10px] bg-green-500/20 text-green-400 px-2 py-0.5 rounded-full font-medium">Active</span>
+                        </div>
+                        <div class="app-glass p-3 rounded-xl flex justify-between items-center">
+                            <span class="text-xs font-medium text-gray-200">Deep Teeth Cleaning</span>
+                            <span class="text-[10px] text-gray-400">Included</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="app-glass p-4 rounded-xl">
-                <h3 class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-3 block">Your Attending Surgeon</h3>
-                <div class="flex items-center gap-4">
-                    <img class="w-14 h-14 rounded-xl object-cover object-center border border-white/10" 
-                         src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=150&q=80" 
-                         alt="Dr. Kidus Profile">
-                    <div>
-                        <h4 class="text-sm font-bold text-white">Dr. Kidus Habtamu</h4>
-                        <p class="text-xs text-gray-400">General & Cosmetic Dentistry</p>
-                        <div class="flex items-center gap-1 mt-1 text-amber-400 text-xs">
-                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                            <span class="text-[10px] text-gray-400 ml-1 font-medium">(4.9 Specialist Rating)</span>
+                <div class="app-glass p-4 rounded-xl">
+                    <h3 class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-3 block">Your Attending Surgeon</h3>
+                    <div class="flex items-center gap-4">
+                        <img class="w-14 h-14 rounded-xl object-cover object-center border border-white/10" 
+                             src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=150&q=80" 
+                             alt="Dr. Kidus Profile">
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Dr. Kidus Habtamu</h4>
+                            <p class="text-xs text-gray-400">General & Cosmetic Specialist</p>
+                            <span class="text-[10px] text-amber-400 block mt-0.5">★ ★ ★ ★ ★ (4.9 Rating)</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="p-1 text-center">
-                <p class="text-[10px] text-gray-500 font-light">Emergency Line: <a href="tel:0912643473" class="text-gray-300 font-medium underline">0912643473</a></p>
+
+            <div id="screen-appts" class="space-y-4 hidden">
+                <h3 class="text-base font-bold tracking-tight mb-1">Appointment History</h3>
+                <div class="app-glass p-4 rounded-xl space-y-3">
+                    <div class="border-b border-white/5 pb-2">
+                        <span class="text-[10px] text-gray-400 block">October 14, 2025</span>
+                        <span class="text-xs font-medium block">Teeth Whitening Session</span>
+                        <span class="text-[10px] text-green-400 mt-0.5 block">● Completed</span>
+                    </div>
+                    <div>
+                        <span class="text-[10px] text-gray-400 block">May 02, 2025</span>
+                        <span class="text-xs font-medium block">Initial Comprehensive Diagnostic</span>
+                        <span class="text-[10px] text-green-400 mt-0.5 block">● Completed</span>
+                    </div>
+                </div>
+                <button onclick="window.location.href='tel:0912643473'" class="w-full bg-white/10 border border-white/10 text-xs font-medium py-3 rounded-xl text-center">
+                    📞 Schedule New Appointment
+                </button>
             </div>
+
+            <div id="screen-messages" class="space-y-3 hidden">
+                <h3 class="text-base font-bold tracking-tight mb-1">Secure Inbox</h3>
+                <div class="app-glass p-4 rounded-xl flex items-start gap-3">
+                    <div class="w-2 h-2 rounded-full bg-amber-400 mt-1.5 shrink-0"></div>
+                    <div>
+                        <h4 class="text-xs font-bold text-white">Clinic Administration</h4>
+                        <p class="text-xs text-gray-300 mt-1 font-light">Your diagnostic x-ray files have been uploaded to your internal chart system successfully.</p>
+                        <span class="text-[9px] text-gray-500 block mt-2">2 hours ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="screen-settings" class="space-y-2 hidden">
+                <h3 class="text-base font-bold tracking-tight mb-3">App Configurations</h3>
+                <div class="app-glass p-3 rounded-xl flex justify-between items-center text-xs">
+                    <span>Push Notifications</span>
+                    <span class="text-green-400 font-medium">Enabled</span>
+                </div>
+                <div class="app-glass p-3 rounded-xl flex justify-between items-center text-xs">
+                    <span>Biometric Login Lock</span>
+                    <span class="text-gray-400">Disabled</span>
+                </div>
+                <div class="app-glass p-3 rounded-xl text-xs text-red-400 text-center font-medium mt-6" onclick="window.location.reload()">
+                    Exit App View Mode
+                </div>
+            </div>
+
         </div>
 
         <nav class="fixed bottom-0 left-0 right-0 app-nav-blur border-t border-white/5 px-6 py-3 flex justify-between items-center z-50">
-            <button class="flex flex-col items-center gap-1 text-amber-400">
+            <button id="nav-home" class="tab-btn flex flex-col items-center gap-1 text-amber-400">
                 <span class="text-lg">🏠</span>
                 <span class="text-[9px] font-bold tracking-wide">Home</span>
             </button>
-            <button class="flex flex-col items-center gap-1 text-gray-400 hover:text-white transition">
+            <button id="nav-appts" class="tab-btn flex flex-col items-center gap-1 text-gray-400 hover:text-white transition">
                 <span class="text-lg">📅</span>
                 <span class="text-[9px] font-medium tracking-wide">Appts</span>
             </button>
-            <button class="flex flex-col items-center gap-1 text-gray-400 hover:text-white transition relative">
+            <button id="nav-messages" class="tab-btn flex flex-col items-center gap-1 text-gray-400 hover:text-white transition relative">
                 <span class="text-lg">💬</span>
                 <span class="text-[9px] font-medium tracking-wide">Messages</span>
-                <span class="absolute top-0 right-1 w-2 h-2 bg-amber-500 rounded-full"></span>
+                <span id="badge-msg" class="absolute top-0 right-1 w-2 h-2 bg-amber-500 rounded-full"></span>
             </button>
-            <button class="flex flex-col items-center gap-1 text-gray-400 hover:text-white transition">
+            <button id="nav-settings" class="tab-btn flex flex-col items-center gap-1 text-gray-400 hover:text-white transition">
                 <span class="text-lg">⚙️</span>
                 <span class="text-[9px] font-medium tracking-wide">Settings</span>
             </button>
@@ -292,23 +331,75 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-        // 1. Check URL parameters for an explicit trigger (?view=app or #app)
+        // --- ROUTING INTERCEPTOR ENGINE ---
         const urlParams = new URLSearchParams(window.location.search);
         const hasAppParam = urlParams.get('view') === 'app' || window.location.hash === '#app';
-
-        // 2. Advanced WebView/Hermit heuristic container check 
-        // Handles cases where Hermit acts as a native system WebView
         const isWebView = navigator.userAgent.includes("; wv)") || navigator.userAgent.includes("wv");
         const isHermitCloak = navigator.userAgent.includes("Hermit") || navigator.userAgent.includes("Hermit-App");
 
-        // Swap interface contexts seamlessly if any parameters match
         if (isHermitCloak || isWebView || hasAppParam) {
           document.getElementById("website-view").style.display = "none";
           document.getElementById("app-view").style.display = "block";
-          
-          // Force base viewport background structure to blend into the app's dark styling
           document.body.style.backgroundColor = "#0f141c";
         }
+
+        // --- LIVE COMPONENT LOGIC SWITCHES ---
+        // 1. Attendance Action Trigger
+        const btnConfirm = document.getElementById("btn-confirm");
+        if(btnConfirm) {
+            btnConfirm.addEventListener("click", function() {
+                const apptBox = document.getElementById("appointment-box");
+                apptBox.className = "bg-green-500/10 rounded-xl p-3 mb-4 border border-green-500/20";
+                apptBox.innerHTML = `
+                    <span class="text-xs font-bold block text-green-400">✓ Booking Confirmed Successfully</span>
+                    <span class="text-[11px] text-green-300/80 font-medium block mt-0.5">We have reserved Dr. Kidus for you tomorrow.</span>
+                `;
+                btnConfirm.style.display = "none";
+            });
+        }
+
+        // 2. Navigation Tab Architecture Functionality
+        const screens = {
+            'nav-home': document.getElementById('screen-home'),
+            'nav-appts': document.getElementById('screen-appts'),
+            'nav-messages': document.getElementById('screen-messages'),
+            'nav-settings': document.getElementById('screen-settings')
+        };
+
+        const navButtons = document.querySelectorAll('.tab-btn');
+
+        navButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.id;
+
+                // Reset all button styles to inactive
+                navButtons.forEach(btn => {
+                    btn.classList.remove('text-amber-400', 'font-bold');
+                    btn.classList.add('text-gray-400', 'font-medium');
+                });
+
+                // Highlight active button tab
+                this.classList.remove('text-gray-400', 'font-medium');
+                this.classList.add('text-amber-400', 'font-bold');
+
+                // Hide all tab container content screens
+                Object.values(screens).forEach(screen => {
+                    if(screen) { screen.classList.remove('block'); screen.classList.add('hidden'); }
+                });
+
+                // Render chosen target context panel active
+                if(screens[targetId]) {
+                    screens[targetId].classList.remove('hidden');
+                    screens[targetId].classList.add('block');
+                }
+
+                // Auto-clear message notification circle tag indicator when opened
+                if(targetId === 'nav-messages') {
+                    const msgBadge = document.getElementById('badge-msg');
+                    if(msgBadge) msgBadge.style.display = 'none';
+                }
+            });
+        });
       });
     </script>
 
